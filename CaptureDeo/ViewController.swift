@@ -12,7 +12,7 @@ class ViewController: UIViewController, URLSessionDownloadDelegate {
     var destinationUrlForFile = URL(string: "a")
     override func viewDidLoad() {
         super.viewDidLoad()
-        downloader()
+        
         
         
     }

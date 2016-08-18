@@ -16,6 +16,7 @@
 		C43BB21A1D65B66F00F147E1 /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = C43BB2161D65B66F00F147E1 /* TFHppleElement.m */; };
 		C43BB21B1D65B66F00F147E1 /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = C43BB2181D65B66F00F147E1 /* XPathQuery.m */; };
 		C43BB21E1D65B68600F147E1 /* libxml2.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C43BB21D1D65B68600F147E1 /* libxml2.2.tbd */; };
+		C43BB22D1D65C0D600F147E1 /* DownloadB100.png in Resources */ = {isa = PBXBuildFile; fileRef = C43BB22C1D65C0D600F147E1 /* DownloadB100.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		C43BB2171D65B66F00F147E1 /* XPathQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPathQuery.h; sourceTree = "<group>"; };
 		C43BB2181D65B66F00F147E1 /* XPathQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPathQuery.m; sourceTree = "<group>"; };
 		C43BB21D1D65B68600F147E1 /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = usr/lib/libxml2.2.tbd; sourceTree = SDKROOT; };
+		C43BB22C1D65C0D600F147E1 /* DownloadB100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DownloadB100.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 				C43BB1FE1D65B64B00F147E1 /* CaptureDeo */,
 				C43BB1FD1D65B64B00F147E1 /* Products */,
 				C43BB2111D65B65600F147E1 /* hpple */,
+				C43BB21F1D65BC6900F147E1 /* Support */,
 				C43BB21C1D65B68600F147E1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -99,6 +102,15 @@
 				C43BB21D1D65B68600F147E1 /* libxml2.2.tbd */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C43BB21F1D65BC6900F147E1 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				C43BB22C1D65C0D600F147E1 /* DownloadB100.png */,
+			);
+			name = Support;
+			path = CaptureDeo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,6 +176,7 @@
 			files = (
 				C43BB20A1D65B64B00F147E1 /* LaunchScreen.storyboard in Resources */,
 				C43BB2071D65B64B00F147E1 /* Assets.xcassets in Resources */,
+				C43BB22D1D65C0D600F147E1 /* DownloadB100.png in Resources */,
 				C43BB2051D65B64B00F147E1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -306,6 +319,7 @@
 				DEVELOPMENT_TEAM = NUM25XX226;
 				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = CaptureDeo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.AI.CaptureDeo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -323,6 +337,7 @@
 				DEVELOPMENT_TEAM = NUM25XX226;
 				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = CaptureDeo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.AI.CaptureDeo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -350,6 +365,7 @@
 				C43BB2101D65B64B00F147E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
