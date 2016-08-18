@@ -1,0 +1,309 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C43BB2001D65B64B00F147E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43BB1FF1D65B64B00F147E1 /* AppDelegate.swift */; };
+		C43BB2021D65B64B00F147E1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43BB2011D65B64B00F147E1 /* ViewController.swift */; };
+		C43BB2051D65B64B00F147E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C43BB2031D65B64B00F147E1 /* Main.storyboard */; };
+		C43BB2071D65B64B00F147E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C43BB2061D65B64B00F147E1 /* Assets.xcassets */; };
+		C43BB20A1D65B64B00F147E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C43BB2081D65B64B00F147E1 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C43BB1FC1D65B64B00F147E1 /* CaptureDeo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CaptureDeo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C43BB1FF1D65B64B00F147E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C43BB2011D65B64B00F147E1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C43BB2041D65B64B00F147E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C43BB2061D65B64B00F147E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C43BB2091D65B64B00F147E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C43BB20B1D65B64B00F147E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C43BB1F91D65B64B00F147E1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C43BB1F31D65B64B00F147E1 = {
+			isa = PBXGroup;
+			children = (
+				C43BB1FE1D65B64B00F147E1 /* CaptureDeo */,
+				C43BB1FD1D65B64B00F147E1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C43BB1FD1D65B64B00F147E1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C43BB1FC1D65B64B00F147E1 /* CaptureDeo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C43BB1FE1D65B64B00F147E1 /* CaptureDeo */ = {
+			isa = PBXGroup;
+			children = (
+				C43BB1FF1D65B64B00F147E1 /* AppDelegate.swift */,
+				C43BB2011D65B64B00F147E1 /* ViewController.swift */,
+				C43BB2031D65B64B00F147E1 /* Main.storyboard */,
+				C43BB2061D65B64B00F147E1 /* Assets.xcassets */,
+				C43BB2081D65B64B00F147E1 /* LaunchScreen.storyboard */,
+				C43BB20B1D65B64B00F147E1 /* Info.plist */,
+			);
+			path = CaptureDeo;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C43BB1FB1D65B64B00F147E1 /* CaptureDeo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C43BB20E1D65B64B00F147E1 /* Build configuration list for PBXNativeTarget "CaptureDeo" */;
+			buildPhases = (
+				C43BB1F81D65B64B00F147E1 /* Sources */,
+				C43BB1F91D65B64B00F147E1 /* Frameworks */,
+				C43BB1FA1D65B64B00F147E1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CaptureDeo;
+			productName = CaptureDeo;
+			productReference = C43BB1FC1D65B64B00F147E1 /* CaptureDeo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C43BB1F41D65B64B00F147E1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Sajjad Aboutalebi";
+				TargetAttributes = {
+					C43BB1FB1D65B64B00F147E1 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = NUM25XX226;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = C43BB1F71D65B64B00F147E1 /* Build configuration list for PBXProject "CaptureDeo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C43BB1F31D65B64B00F147E1;
+			productRefGroup = C43BB1FD1D65B64B00F147E1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C43BB1FB1D65B64B00F147E1 /* CaptureDeo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C43BB1FA1D65B64B00F147E1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C43BB20A1D65B64B00F147E1 /* LaunchScreen.storyboard in Resources */,
+				C43BB2071D65B64B00F147E1 /* Assets.xcassets in Resources */,
+				C43BB2051D65B64B00F147E1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C43BB1F81D65B64B00F147E1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C43BB2021D65B64B00F147E1 /* ViewController.swift in Sources */,
+				C43BB2001D65B64B00F147E1 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C43BB2031D65B64B00F147E1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C43BB2041D65B64B00F147E1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C43BB2081D65B64B00F147E1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C43BB2091D65B64B00F147E1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C43BB20C1D65B64B00F147E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C43BB20D1D65B64B00F147E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C43BB20F1D65B64B00F147E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = NUM25XX226;
+				INFOPLIST_FILE = CaptureDeo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.AI.CaptureDeo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		C43BB2101D65B64B00F147E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = NUM25XX226;
+				INFOPLIST_FILE = CaptureDeo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.AI.CaptureDeo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C43BB1F71D65B64B00F147E1 /* Build configuration list for PBXProject "CaptureDeo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C43BB20C1D65B64B00F147E1 /* Debug */,
+				C43BB20D1D65B64B00F147E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C43BB20E1D65B64B00F147E1 /* Build configuration list for PBXNativeTarget "CaptureDeo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C43BB20F1D65B64B00F147E1 /* Debug */,
+				C43BB2101D65B64B00F147E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C43BB1F41D65B64B00F147E1 /* Project object */;
+}
