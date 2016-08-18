@@ -8,46 +8,84 @@
 
 import UIKit
 
-class ViewController: UIViewController, URLSessionDownloadDelegate {
+class ViewController: UIViewController, URLSessionDownloadDelegate, UITextFieldDelegate {
+    
+    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var progressBar: UIProgressView!
+    @IBOutlet weak var sizeLabel: UILabel!
+    
+    @IBOutlet weak var indicator: UIActivityIndicatorView!
+    @IBOutlet weak var downloadingLabel: UILabel!
+    
+    @IBAction func downloadBtn(_ sender: AnyObject) {
+        if textField.text == "" {
+            displayAlert(title: "Opps!", msg: "Please enter Link.")
+        }else {
+            parseUrl(url: textField.text!)
+            self.view.endEditing(true)
+            downloadingLabel.isHidden = false
+            indicator.isHidden = false
+            indicator.startAnimating()
+        }
+        
+    }
     var destinationUrlForFile = URL(string: "a")
+    
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        textField.delegate = self
+        progressBar.isHidden = true
+        sizeLabel.isHidden = true
+        downloadingLabel.isHidden = true
+        indicator.isHidden = true
         
         
     }
     
-    func parseUrl() {
-        let url = URL(string: "https://www.instagram.com/p/BJLVc2-j5yX/")
-        let request = URLRequest(url: url!)
-        _ = URLSession.shared.dataTask(with: request) { (data, response, error) in
-            
+    func parseUrl(url: String) {
+        let url = URL(string: url)
+        _ = URLSession.shared.dataTask(with: url!, completionHandler: { (data, response, error) in
             if error != nil {
-                print(error)
+                self.displayAlert(title: "Opps!", msg: "Invalid link")
+                
             } else {
                 let doc = TFHpple(htmlData: data as Data!)
                 let elements = doc?.search(withXPathQuery: "//meta[@property='og:video:secure_url']") as? [TFHppleElement]
                 if elements! == [] {
                     let imageElements = doc?.search(withXPathQuery: "//meta[@property='og:image']") as? [TFHppleElement]
-                    for element in imageElements! {
-                        print(element["content"])
+                    if imageElements! == [] {
+                        self.displayAlert(title: "Opps!", msg: "Nothing found!")
+                    }else {
+                        for element in imageElements! {
+                            self.downloader(url: element["content"] as! String)
+                        }
                     }
+                    
                 }else {
                     for element in elements! {
-                        print(element["content"])
+                        self.downloader(url: element["content"] as! String)
                     }
                 }
+
             }
-            
-            
-            }.resume()
+
+        }).resume()
         
     }
-    
-    
-    
-    func downloader() {
-        let url = URL(string: "https://igcdn-photos-c-a.akamaihd.net/hphotos-ak-xpa1/t51.2885-15/s750x750/sh0.08/e35/14026751_2082333648659338_963951390_n.jpg?ig_cache_key=MTMxODg0ODIxMTIxMzI3MzgzOQ%3D%3D.2")
+ 
+ 
+    func downloader(url: String) {
+        let url = URL(string: url)
         var downloadTask = URLSessionDownloadTask()
         var backgroundSession = URLSession()
         let backgroundSessionConfig = URLSessionConfiguration.background(withIdentifier: "backgroundSession")
@@ -64,26 +102,37 @@ class ViewController: UIViewController, URLSessionDownloadDelegate {
         destinationUrlForFile = URL(fileURLWithPath: documentDirectoryPath.appending((downloadTask.response?.suggestedFilename!)!))
         do {
             try fileManager.moveItem(at: location, to: destinationUrlForFile!)
-            print("2")
         }catch {}
-        if URL(fileURLWithPath: (downloadTask.response?.suggestedFilename!)!).pathExtension == "jpg"{
+        if URL(fileURLWithPath: (downloadTask.response?.suggestedFilename!)!).pathExtension == "jpg" {
             saveImageToLibrary(path: (destinationUrlForFile?.path)!)
+        } else if URL(fileURLWithPath: (downloadTask.response?.suggestedFilename!)!).pathExtension == "mp4" {
+            saveVideoWithPath(path: destinationUrlForFile!.path)
+            
         }
     }
     
     
     func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didWriteData bytesWritten: Int64, totalBytesWritten: Int64, totalBytesExpectedToWrite: Int64) {
+        progressBar.isHidden = false
+        sizeLabel.isHidden = false
+        sizeLabel.text = "\(round(Double(totalBytesWritten)/1048576*100)/100) MB of \(round(Double(totalBytesExpectedToWrite)/1048576*100)/100) MB"
+        progressBar.setProgress(Float(totalBytesWritten)/Float(totalBytesExpectedToWrite), animated: true)
         
         
     }
     
     func saveVideoWithPath(path: String) {
-        let isFileFound = FileManager.default.fileExists(atPath: path)
-        print(isFileFound)
-        deleteFileInTheEnd(path: path)
-        let isFileFounda = FileManager.default.fileExists(atPath: path)
-        print(isFileFounda)
+        UISaveVideoAtPathToSavedPhotosAlbum(path, self, #selector(self.saveVideo), nil)
         
+        
+    }
+    func saveVideo(video: String, didFinishSavingWithError error: NSError?, contextInfo:UnsafeRawPointer) {
+        if error != nil {
+            print(error)
+        }else {
+            displayAlert(title: "Saved!", msg: "Your altered video has been saved to your photos.")
+            deleteFileInTheEnd(path: destinationUrlForFile!.path)
+        }
     }
     
     func saveImageToLibrary(path: String) {
@@ -106,14 +155,24 @@ class ViewController: UIViewController, URLSessionDownloadDelegate {
     func deleteFileInTheEnd(path: String) {
         do {
             try FileManager.default.removeItem(atPath: path)
-            print("deleted")
         } catch {}
     }
     
     func displayAlert(title: String, msg: String) {
-        let ac = UIAlertController(title: title, message: msg, preferredStyle: .alert)
-        ac.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        self.present(ac, animated: true, completion: nil)
+        DispatchQueue.main.async {
+            let ac = UIAlertController(title: title, message: msg, preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+            self.present(ac, animated: true, completion: nil)
+            self.hideStuff()
+            }
+    }
+    
+    func hideStuff() {
+        downloadingLabel.isHidden = true
+        indicator.stopAnimating()
+        indicator.isHidden = true
+        progressBar.isHidden = true
+        sizeLabel.isHidden = true
     }
     
     

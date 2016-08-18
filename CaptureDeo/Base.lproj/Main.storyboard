@@ -32,6 +32,9 @@
                                     <constraint firstAttribute="height" constant="47" id="Icb-EX-Ee9"/>
                                 </constraints>
                                 <state key="normal" image="DownloadB100.png"/>
+                                <connections>
+                                    <action selector="downloadBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8uL-g2-gAA"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ks3-Kz-btH">
                                 <constraints>
@@ -51,14 +54,34 @@ and submit to download</string>
                                     <segue destination="fQI-6l-d2w" kind="show" id="GAs-LM-AD8"/>
                                 </connections>
                             </button>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="frO-Lj-Sxn">
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="frO-Lj-Sxn">
                                 <color key="progressTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="trackTintColor" red="0.21960784310000001" green="0.56470588239999997" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
                             </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dqr-ks-JzH">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="6xL-zh-IJy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" red="0.63392496109008789" green="0.92453068494796753" blue="0.80167859792709351" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Downloading" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IwJ-5D-RtL">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="1Ld-vx-gOy"/>
+                                    <constraint firstAttribute="height" constant="21" id="8qV-BB-HQF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.0018741782987490296" green="0.90187102556228638" blue="0.99548321962356567" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="t0Y-Y4-SDz"/>
                         </subviews>
                         <color key="backgroundColor" red="0.48928385972976685" green="0.42401394248008728" blue="0.91052800416946411" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="ks3-Kz-btH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="37" id="2KQ-O6-GdC"/>
+                            <constraint firstItem="IwJ-5D-RtL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7Ay-UC-HwQ"/>
+                            <constraint firstItem="t0Y-Y4-SDz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="186" id="7fd-dr-0fo"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="yX1-bb-aYP" secondAttribute="bottom" constant="20" id="9PL-i8-t9g"/>
                             <constraint firstItem="HdL-Mi-mAM" firstAttribute="top" secondItem="gWa-DQ-ibl" secondAttribute="bottom" constant="45" id="A9n-Ks-LoX"/>
                             <constraint firstItem="HdL-Mi-mAM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Asi-YP-gWL"/>
@@ -67,14 +90,28 @@ and submit to download</string>
                             <constraint firstItem="yX1-bb-aYP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="123" id="KgR-mY-Oo1"/>
                             <constraint firstItem="ks3-Kz-btH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Nvp-7Q-xFh"/>
                             <constraint firstAttribute="trailingMargin" secondItem="frO-Lj-Sxn" secondAttribute="trailing" constant="40" id="Q8t-u2-PsQ"/>
+                            <constraint firstItem="dqr-ks-JzH" firstAttribute="top" secondItem="frO-Lj-Sxn" secondAttribute="bottom" constant="3" id="QAR-Gr-ZuB"/>
                             <constraint firstItem="frO-Lj-Sxn" firstAttribute="top" secondItem="HdL-Mi-mAM" secondAttribute="bottom" constant="72" id="SNU-B1-Bas"/>
+                            <constraint firstItem="dqr-ks-JzH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="41" id="UJi-n8-6K1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="t0Y-Y4-SDz" secondAttribute="trailing" constant="82" id="azl-Ak-oQm"/>
+                            <constraint firstItem="t0Y-Y4-SDz" firstAttribute="top" secondItem="gWa-DQ-ibl" secondAttribute="bottom" constant="114" id="d5L-dC-IVu"/>
                             <constraint firstItem="gWa-DQ-ibl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="eom-sJ-PvD"/>
+                            <constraint firstItem="IwJ-5D-RtL" firstAttribute="top" secondItem="HdL-Mi-mAM" secondAttribute="bottom" constant="21" id="n0x-2g-Tvg"/>
                             <constraint firstItem="frO-Lj-Sxn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="41" id="qvF-9m-NBR"/>
                             <constraint firstItem="gWa-DQ-ibl" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="sPu-7P-imX"/>
                             <constraint firstItem="gWa-DQ-ibl" firstAttribute="top" secondItem="ks3-Kz-btH" secondAttribute="bottom" constant="66" id="vXQ-Mq-YWK"/>
+                            <constraint firstItem="frO-Lj-Sxn" firstAttribute="top" secondItem="t0Y-Y4-SDz" secondAttribute="bottom" constant="30" id="vqb-HN-unj"/>
                             <constraint firstItem="frO-Lj-Sxn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xeZ-UZ-ll6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dqr-ks-JzH" secondAttribute="trailing" constant="40" id="zbF-aJ-8Qg"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="downloadingLabel" destination="IwJ-5D-RtL" id="5FH-N8-9cU"/>
+                        <outlet property="indicator" destination="t0Y-Y4-SDz" id="Xte-3E-Oed"/>
+                        <outlet property="progressBar" destination="frO-Lj-Sxn" id="Gyf-ru-L7D"/>
+                        <outlet property="sizeLabel" destination="dqr-ks-JzH" id="eSW-X7-ikK"/>
+                        <outlet property="textField" destination="gWa-DQ-ibl" id="jWu-ur-18P"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
