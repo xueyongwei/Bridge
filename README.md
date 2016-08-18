@@ -4,9 +4,10 @@ The easiest way to download videos from Youtube, Tumblr, Dailymotion, Vine, Face
 
 ##Currently Supported Sites For CaptureDeo:
 - [x] Instagram
-- [] Facebook
-- [] Youtube
-- [] Tumblr
-- [] Vine
-- [] Vimeo
-- [] SoundCloud
+- [ ] Facebook
+- [ ] Youtube
+- [ ] Tumblr
+- [ ] Vine
+- [ ] Vimeo
+- [ ] SoundCloud
+- [ ] ...
